@@ -2,7 +2,7 @@ export const user = {
   id: 1,
   name: "Admin User",
   email: "admin@example.com",
-  isAdmin: true,
+  isAdmin: FinalizationRegistry,
 };
 
 import {

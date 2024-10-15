@@ -4,13 +4,10 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import TipTapEditor from "@/components/editor/TipTapEditor";
-import NovelEditor from "@/components/editor/NovelEditor";
 import { PostMetadata } from "../editor/PostMetadata";
+import EditorY from "../editor/editor-y";
 
 export default function NewPostComponent() {
-  const [editorType, setEditorType] = useState<"tiptap" | "novel">("tiptap");
   const [title, setTitle] = useState("");
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -34,25 +31,11 @@ export default function NewPostComponent() {
             />
           </div>
           <div className="mb-4">
-            <Tabs
-              value={editorType}
-              onValueChange={(value) =>
-                setEditorType(value as "tiptap" | "novel")
-              }>
-              <TabsList className="grid w-full grid-cols-2">
-                <TabsTrigger value="tiptap">TipTap Editor</TabsTrigger>
-                <TabsTrigger value="novel">Novel Editor</TabsTrigger>
-              </TabsList>
-              <TabsContent value="tiptap">
-                <TipTapEditor />
-              </TabsContent>
-              <TabsContent value="novel">
-                <NovelEditor />
-              </TabsContent>
-            </Tabs>
+            <Label htmlFor="content">Content</Label>
+            <EditorY />
           </div>
         </div>
-        <div className="w-full lg:w-64">
+        <div className="w-full lg:w-64 lg:sticky lg:top-4 self-start">
           <PostMetadata />
           <Button type="submit" className="w-full mt-4">
             Save Post

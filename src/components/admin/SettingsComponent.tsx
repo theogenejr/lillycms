@@ -32,6 +32,7 @@ interface GeneralSettings {
   allowComments: boolean;
   moderateComments: boolean;
   theme: string;
+  editorType: string; // Added editorType
 }
 
 interface UserPreferences {
@@ -58,6 +59,7 @@ export default function SettingsComponent() {
     allowComments: true,
     moderateComments: true,
     theme: "light",
+    editorType: "editor-y", // Added editorType with default value
   });
 
   const [userPreferences, setUserPreferences] = useState<UserPreferences>({
@@ -202,6 +204,26 @@ export default function SettingsComponent() {
                   }
                 />
                 <Label htmlFor="moderateComments">Moderate Comments</Label>
+              </div>
+              <div className="space-y-2">
+                <Label htmlFor="editorType">Rich Text Editor</Label>
+                <Select
+                  name="editorType"
+                  value={generalSettings.editorType}
+                  onValueChange={(value) =>
+                    setGeneralSettings((prev) => ({
+                      ...prev,
+                      editorType: value,
+                    }))
+                  }>
+                  <SelectTrigger>
+                    <SelectValue placeholder="Select an editor" />
+                  </SelectTrigger>
+                  <SelectContent>
+                    <SelectItem value="editor-y">Editor Y</SelectItem>
+                    <SelectItem value="other-editor">Editor V</SelectItem>
+                  </SelectContent>
+                </Select>
               </div>
               <div className="space-y-2">
                 <Label htmlFor="theme">Theme</Label>

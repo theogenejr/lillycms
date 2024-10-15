@@ -10,7 +10,7 @@ export default function AdminLayout({
   return (
     <div className="h-screen w-full overflow-hidden">
       <div className="flex h-full">
-        <Sidebar className="w-[220px] lg:w-[280px] flex-shrink-0 overflow-y-auto" />
+        <Sidebar className="w-[220px] flex-shrink-0 overflow-y-auto" />
         <div className="flex flex-col flex-grow overflow-hidden">
           <Header className="flex-shrink-0" />
           <main className="flex-grow overflow-y-auto p-4 lg:p-6">

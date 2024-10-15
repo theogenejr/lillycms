@@ -16,6 +16,7 @@ import {
   PopoverContent,
   PopoverTrigger,
 } from "@/components/ui/popover";
+import { ScrollArea } from "../ui/scroll-area";
 
 export function PostMetadata() {
   const [excerpt, setExcerpt] = useState("");
@@ -37,7 +38,7 @@ export function PostMetadata() {
   };
 
   return (
-    <div className="space-y-4">
+    <ScrollArea className="space-y-4">
       <div>
         <Label htmlFor="featured-image">Featured Image</Label>
         <Input
@@ -124,6 +125,6 @@ export function PostMetadata() {
           </SelectContent>
         </Select>
       </div>
-    </div>
+    </ScrollArea>
   );
 }
