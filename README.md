@@ -17,7 +17,7 @@ LillyCMS is a lightweight, open-source blog Content Management System designed s
 
 - **Frontend**: Next.js (React)
 - **Authentication**: Firebase Authentication
-- **Content Storage**: Firebase Firestore
+- **Content Storage**: Firebase Storage
 - **Styling**: Tailwind CSS
 - **Rich Text Editor**: TipTap
 - **Markdown Conversion**: Turndown.js
