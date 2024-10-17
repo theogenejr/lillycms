@@ -2,32 +2,21 @@
 
 import Link from "next/link";
 import {
-  Bell,
   CircleUser,
   FileText,
   Home,
-  LineChart,
   Menu,
   MessageCircle,
-  Package,
-  Package2,
   Plus,
   Search,
   Settings,
-  ShoppingCart,
   Tags,
   Users,
 } from "lucide-react";
 
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
+
 import {
   DropdownMenu,
   DropdownMenuContent,

@@ -128,7 +128,11 @@ export default function CommentsComponent() {
     <div className="container mx-auto">
       <h1 className="text-3xl font-bold mb-5">Comments</h1>
       <div className="flex justify-between mb-5">
-        <Select value={filter} onValueChange={(value: any) => setFilter(value)}>
+        <Select
+          value={filter}
+          onValueChange={(value: "all" | "approved" | "pending" | "spam") =>
+            setFilter(value)
+          }>
           <SelectTrigger className="w-[180px]">
             <SelectValue placeholder="Filter by status" />
           </SelectTrigger>

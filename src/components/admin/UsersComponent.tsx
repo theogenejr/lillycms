@@ -106,7 +106,11 @@ export default function UsersComponent() {
     <div className="container mx-auto">
       <h1 className="text-3xl font-bold mb-5">Users</h1>
       <div className="flex justify-between mb-5">
-        <Select value={filter} onValueChange={(value: any) => setFilter(value)}>
+        <Select
+          value={filter}
+          onValueChange={(value: "admin" | "super_admin" | "guest" | "all") =>
+            setFilter(value)
+          }>
           <SelectTrigger className="w-[180px]">
             <SelectValue placeholder="Filter by role" />
           </SelectTrigger>
@@ -161,7 +165,7 @@ export default function UsersComponent() {
                 </Label>
                 <Select
                   value={newUser.role}
-                  onValueChange={(value: any) =>
+                  onValueChange={(value: "super_admin" | "admin" | "guest") =>
                     setNewUser({ ...newUser, role: value })
                   }>
                   <SelectTrigger className="w-[180px]">

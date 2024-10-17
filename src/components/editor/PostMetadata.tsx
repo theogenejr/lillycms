@@ -17,6 +17,7 @@ import {
   PopoverTrigger,
 } from "@/components/ui/popover";
 import { ScrollArea } from "../ui/scroll-area";
+import Image from "next/image";
 
 export function PostMetadata() {
   const [excerpt, setExcerpt] = useState("");
@@ -48,7 +49,7 @@ export function PostMetadata() {
           onChange={handleImageUpload}
         />
         {featuredImage && (
-          <img
+          <Image
             src={featuredImage}
             alt="Featured"
             className="mt-2 max-w-full h-auto"

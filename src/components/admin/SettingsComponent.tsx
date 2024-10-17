@@ -137,7 +137,7 @@ export default function SettingsComponent() {
             <CardHeader>
               <CardTitle>General Settings</CardTitle>
               <CardDescription>
-                Manage your blog's general settings
+                Manage your blog&apos;s general settings
               </CardDescription>
             </CardHeader>
             <CardContent className="space-y-4">
