@@ -326,8 +326,7 @@ const MenuBar = () => {
 
 const extensions = [
   Color.configure({ types: [TextStyle.name, ListItem.name] }),
-  // @ts-expect-error
-  TextStyle.configure({ types: [ListItem.name] }),
+  TextStyle.configure(),
   StarterKit.configure({
     bulletList: {
       keepMarks: true,
